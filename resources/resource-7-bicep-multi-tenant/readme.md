@@ -29,7 +29,7 @@ Deploy the main.bicep file with one of the following commands, changing the depl
 Deploy as Subscription Deployment:
 
 ```azurecli
-az deployment sub create --name 'deploy-sub-yourorg-iam-custom-extensions' --location norwayeast --template-file main.bicep
+az deployment sub create --name 'deploy-sub-yourorg-iam-multi-tenant' --location norwayeast --template-file main.bicep
 ```
 
 Deploy as Deployment Stack is *NOT* supported when using the Microsoft Graph API extension.
