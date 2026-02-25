@@ -125,6 +125,8 @@ Once you're ready, verify if the MS Graph permissions and roles have been config
 
 Now the access package has been configured correctly lets verify if it's fully operational. This can be done by requesting the access package via [MyAccess](https://myaccess.microsoft.com) and make sure the entire process completes successfully and the callback of the custom extension is registered correctly.
 
+If this all succeeds the privileged account is created and enabled, the regular office account should have received an email with the Temporary Access Pass for onboarding which you will use in the 3rd next lab exercise.
+
 &nbsp;
 
 ## Lab 2.8 - Summary & Discussion
