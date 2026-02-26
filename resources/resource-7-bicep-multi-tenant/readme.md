@@ -33,3 +33,20 @@ az deployment sub create --name 'deploy-sub-yourorg-iam-multi-tenant' --location
 ```
 
 Deploy as Deployment Stack is *NOT* supported when using the Microsoft Graph API extension.
+
+## Post-Deployment Configuration
+
+After deploying the Function App using the Bicep code here, you need to follow some manual guidelines for setting up the Functions and prepare to integrate the Logic App Custom Extension.
+
+# Create Function
+
+In the Azure Portal, find the deployed Function App, and under Functions at the Overview page, select to Create in the Portal. (You can optionally use a local VS code editor or integrate with source control, but that is outside the scope here).
+
+1. Select HTTP Trigger as Template
+2. Name the Function something like 'GetGraphToken'
+3. Use 'Function' as Authorization Level
+4. Change the content of the files: copying the content of the files from this source:
+    1. Run.ps1 -> https://github.com/JanVidarElven/token-broker-exchange-assertion-graph-token-multi-tenant-wif/blob/main/GetGraphToken/run.ps1
+    1. Function.json -> https://github.com/JanVidarElven/token-broker-exchange-assertion-graph-token-multi-tenant-wif/blob/main/GetGraphToken/function.json
+5. Copy the Function URL
+
